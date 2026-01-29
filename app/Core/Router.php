@@ -28,6 +28,24 @@ class Router{
             return;
         }
 
+        if ($path === '/camera') {
+            require_once __DIR__ . '/../Controllers/PhotoController.php';
+            (new PhotoController())->camera();
+            return;
+        }
+
+        if ($path === '/photos/store') {
+            require_once __DIR__ . '/../Controllers/PhotoController.php';
+            (new PhotoController())->store();
+            return;
+        }
+
+        if ($path === '/gallery') {
+            require_once __DIR__ . '/../Controllers/PhotoController.php';
+            (new PhotoController())->gallery();
+            return;
+        }
+
         // check DB don't need but it can use test of connection
         // if ($path === '/db-check') {
         //     require_once __DIR__ . '/../Core/Database.php';

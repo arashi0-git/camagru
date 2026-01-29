@@ -1,3 +1,6 @@
+<?php
+$loggedIn = !empty($_SESSION['user_id']);
+?>
 <!DOCTYPE html>
 <html>
 <head><meta charset="UTF-8"><title>Home</title></head>
